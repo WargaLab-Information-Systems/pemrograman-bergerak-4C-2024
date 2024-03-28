@@ -1,0 +1,8 @@
+Nama   : Devi Pebiyanti
+NIM    : 220441100145
+Asprak : Nur Maulana Arrafi
+
+Membuat program sewa kost sederhana secara statis menggunakan kotlin yang memuat variabel, if-else, looping, function, dan class.
+
+Link Kotlin :
+https://pl.kotl.in/sch8DyCtA
