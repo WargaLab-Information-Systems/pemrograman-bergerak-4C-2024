@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Sebagai tempat/wadah untuk menampilkan player dalam bentuk GridLayoutManager -->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@color/white"
+    app:cardCornerRadius="6dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/hotel_image"
+            android:layout_width="177dp"
+            android:layout_height="119dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/hotel2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/hotel_name"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Ubud's Hotel"
+            android:textSize="14sp"
+            android:fontFamily="@font/quicksand_bold"
+            app:layout_constraintEnd_toEndOf="@+id/hotel_image"
+            app:layout_constraintStart_toStartOf="@+id/hotel_image"
+            app:layout_constraintTop_toBottomOf="@+id/hotel_image" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/org"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/org"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hotel_name" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_org"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:text="50"
+            android:textSize="12sp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toEndOf="@+id/org"
+            app:layout_constraintTop_toTopOf="@+id/org" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/bintang"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/bintang"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/text_bintang"
+            app:layout_constraintTop_toTopOf="@+id/text_bintang" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_bintang"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:text="50"
+            android:textSize="12sp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/text_org" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
