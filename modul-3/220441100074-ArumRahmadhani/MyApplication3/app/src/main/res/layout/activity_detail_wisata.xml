@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".DetailWisataActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/wisata_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Ubud's Hotel"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:fontFamily="@font/quicksand_bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/bagikan_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:src="@drawable/gam5"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="50dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/wisata_name" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/wisata_image"
+            android:layout_width="314dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/gam2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/wisata_name" />
+
+        <TextView
+            android:id="@+id/wisata_description"
+            android:layout_width="314dp"
+            android:layout_height="wrap_content"
+            android:text="@string/desc"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            android:justificationMode="inter_word"
+            android:textSize="12sp"
+            android:fontFamily="@font/poppins"
+            app:layout_constraintStart_toStartOf="@+id/wisata_image"
+            app:layout_constraintTop_toBottomOf="@+id/wisata_image"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

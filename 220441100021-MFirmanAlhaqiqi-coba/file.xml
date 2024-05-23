@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".panel3">
+
+    <TextView
+        android:id="@+id/uni"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="23dp"
+        android:text="Universitas Trunojoyo"
+        android:textSize="18sp"
+        android:fontFamily="@font/bold"
+        android:textColor="@color/black"
+        android:layout_width="203dp"
+        android:layout_height="27dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/utm"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginStart="334dp"
+        android:layout_marginTop="27dp"
+        android:background="@drawable/e"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/beranda"
+        android:layout_marginTop="5dp"
+        android:textSize="15sp"
+        android:text="Profile"
+        android:textColor="@color/black"
+        android:fontFamily="@font/reguler"
+        android:layout_width="65dp"
+        android:layout_height="23dp"
+        app:layout_constraintStart_toStartOf="@+id/uni"
+        app:layout_constraintTop_toBottomOf="@+id/uni" />
+
+    <ImageView
+        android:id="@+id/gam8"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="146dp"
+        android:background="@drawable/g"
+        android:layout_width="169dp"
+        android:layout_height="169dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/uni2"
+        android:layout_width="203dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginStart="95dp"
+        android:fontFamily="@font/bold"
+        android:text="Universitas Trunojoyo"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gam8" />
+
+    <TextView
+        android:id="@+id/profils"
+        android:layout_width="126dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="426dp"
+        android:fontFamily="@font/semi"
+        android:text="Profile Singkat"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="@+id/beranda"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/penjelasan4"
+        android:layout_width="356dp"
+        android:layout_height="231dp"
+        android:layout_marginTop="464dp"
+        android:layout_marginEnd="19dp"
+        android:fontFamily="@font/reguler"
+        android:justificationMode="inter_word"
+        android:text="@string/isi"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

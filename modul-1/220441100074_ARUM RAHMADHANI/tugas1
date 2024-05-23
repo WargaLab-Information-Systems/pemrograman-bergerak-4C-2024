@@ -1,0 +1,97 @@
+class TempatWisata(
+    var nama: String,
+    var lokasi: String,
+    var jenis: String,
+    var hargaTiket: Int,
+    var deskripsi: String,
+    var jumlahTiket: Int
+) {
+    fun cetak(): String {
+        val totalHarga = hargaTiket * jumlahTiket
+        return """
+            Nama Tempat Wisata: $nama
+            Lokasi: $lokasi
+            Jenis: $jenis
+            Harga Tiket: Rp. $hargaTiket
+            Deskripsi: $deskripsi
+            Jumlah Tiket: $jumlahTiket
+            Total Harga: Rp. $totalHarga
+        """.trimIndent()
+    }
+}
+
+fun main() {
+    println("Selamat Datang di Pemesanan Tiket Wisata Indonesia")
+    println()
+    
+    var isRunning = true
+
+    val dataTempatWisata = mutableListOf(
+        TempatWisata("Pantai Kuta", "Bali", "Pantai", 50000, "cocok untuk bersantai bersama keluarga", 0),
+        TempatWisata("Gunung Bromo", "Jawa Timur", "Gunung", 75000, "keindahan tiada tanding", 0),
+        TempatWisata("Taman Nasional Komodo", "Nusa Tenggara Timur", "Taman Nasional", 100000, "mengenal lebih jauh komodo", 0)
+    )
+   
+    while (isRunning) {
+        println("===========================================================")
+        println("============== Daftar Wisata Terbaru 2024 : ==============")
+        println("1. Pantai Kuta")
+        println("2. Gunung Bromo")
+        println("3. Taman Nasional Komodo")
+        println("4. Keluar")
+        println("-----------------------------------------------------------")
+       
+        val pilihan = readLine()?.toIntOrNull() ?: 1
+        println("Pilihan Anda: $pilihan")
+
+        when (pilihan) {
+            1 -> {
+                val tempat = dataTempatWisata[0]
+                val jumlah = readLine()?.toIntOrNull() ?: 2
+                tempat.jumlahTiket = jumlah
+                println("=====================================")
+                println("\nTempat Wisata berhasil dipilih!")
+                println("=====================================")
+                println(tempat.cetak())
+                isRunning = false
+            }
+            2 -> {
+                val tempat = dataTempatWisata[1]
+                val jumlah = readLine()?.toIntOrNull() ?: 2
+                tempat.jumlahTiket = jumlah
+                println("=====================================")
+                println("\nTempat Wisata berhasil dipilih!")
+                println("=====================================")
+                println(tempat.cetak())
+                isRunning = false
+            }
+            3 -> {
+                val tempat = dataTempatWisata[2]
+                val jumlah = readLine()?.toIntOrNull() ?: 2
+                tempat.jumlahTiket = jumlah
+                println("=====================================")
+                println("\nTempat Wisata berhasil dipilih!")
+                println("=====================================")
+                println(tempat.cetak())
+                isRunning = false
+            }
+            4 -> {
+                println("=====================================")
+                println("Terimakasih... Tetap Jaga Keselamatan :)")
+                println("=====================================")
+                isRunning = false
+            }
+            5 -> {
+                println("=====================================")
+                println("Pilihan tidak valid....................")
+                println("=====================================")
+                isRunning = false
+            }
+            else -> {
+                println("=====================================")
+                println("Pilihan tidak valid. Silakan pilih lagi.")
+                println("=====================================")
+            }
+        }
+    }
+}

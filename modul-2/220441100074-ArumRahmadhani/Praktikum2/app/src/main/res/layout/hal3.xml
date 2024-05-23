@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Halaman3">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="210dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="23dp"
+            android:fontFamily="@font/popin2"
+            android:text="Universitas Trunojoyo"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/profil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/popin3"
+            android:text="Profile"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <ImageView
+            android:id="@+id/utm1"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginEnd="23dp"
+            android:src="@drawable/utm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/utm2"
+            android:layout_width="169dp"
+            android:layout_height="169dp"
+            android:layout_marginTop="68dp"
+            android:src="@drawable/utm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profil" />
+
+        <TextView
+            android:id="@+id/utm3"
+            android:layout_width="210dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="21dp"
+            android:fontFamily="@font/popin2"
+            android:text="Universitas Trunojoyo"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/utm2" />
+
+        <TextView
+            android:id="@+id/kegiatan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="63dp"
+            android:fontFamily="@font/popin2"
+            android:text="Profile Singkat"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/utm3" />
+
+        <TextView
+            android:id="@+id/ket"
+            android:layout_width="356dp"
+            android:layout_height="231dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/popin3"
+            android:justificationMode="inter_word"
+            android:layout_marginBottom="157dp"
+            android:text="@string/keterangan_utm"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/kegiatan"
+            app:layout_constraintTop_toBottomOf="@+id/kegiatan" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

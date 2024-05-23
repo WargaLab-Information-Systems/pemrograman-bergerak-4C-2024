@@ -1,0 +1,70 @@
+import java.util.Scanner
+
+fun main() {
+    val scanner = Scanner(System.`in`)
+
+    println("Selamat Datang di Warkop Asella")
+    println("==================================")
+
+    // Menu
+    val menus = arrayOf(
+        Pair("Kopi Hitam", 10000),
+        Pair("Es Teh Manis", 5000),
+        Pair("Kopi Susu", 7000),
+        Pair("Wedang Uwuh", 15000),
+        Pair("Es Sirup", 5000)
+    )
+
+    var order = mutableMapOf<String, Int>()
+
+    while (true) {
+        println("\nOur Menu:")
+        for (i in 1..menus.size) {
+            println("$i. ${menus[i - 1].first} = Rp${menus[i - 1].second}/1X")
+        }
+
+        print("Pilih Menu (1-${menus.size}) : ")
+        val chosenMenu = try { scanner.nextInt() } catch (e: Exception) { scanner.next(); 0 }
+
+        if (chosenMenu !in 1..menus.size) {
+            println("Pilihan Tidak Tersedia, Coba Lagi")
+            continue
+        }
+
+        print("Berapa Porsi : ")
+        val qty = try { scanner.nextInt() } catch (e: Exception) { scanner.next(); 0 }
+
+        if (qty < 1) {
+            println("Jumlah Porsi Harus Lebih Dari 0, Coba Lagi")
+            continue
+        }
+
+        order[menus[chosenMenu - 1].first] = qty * menus[chosenMenu - 1].second
+
+        println("${qty} Porsi ${menus[chosenMenu - 1].first} Berhasil Dimasukkan")
+
+        // Payment processing
+        println("\nSilahkan Lakukan Pembayaran")
+
+        print("Masukkan Jumlah Uang Pembayaran : ")
+        val payment = scanner.nextInt()
+
+        if (payment < order.values.sum()) {
+            println("Uangmu Kurang!")
+        } else {
+            var change = payment - order.values.sum()
+            println("Pembayaran Berhasil! Kembalian Anda : Rp$change")
+
+            // Display order summary
+            println("\nDetail Pemesanan\n")
+
+            order.forEach { (name, value) ->
+                println("$name x $qty = Rp$value")
+            }
+
+            break
+        }
+    }
+
+    scanner.close()
+}

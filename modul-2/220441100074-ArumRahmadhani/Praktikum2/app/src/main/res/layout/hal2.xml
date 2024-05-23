@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Halaman2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="210dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="23dp"
+            android:fontFamily="@font/popin2"
+            android:text="Universitas Trunojoyo"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/beranda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/popin3"
+            android:text="Beranda"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <ImageView
+            android:id="@+id/utm1"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginEnd="23dp"
+            android:src="@drawable/utm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/kegiatan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:fontFamily="@font/popin2"
+            android:text="aktivitas kegiatan"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="@+id/beranda"
+            app:layout_constraintTop_toBottomOf="@+id/beranda" />
+
+        <ImageView
+            android:id="@+id/gam1"
+            android:layout_width="165dp"
+            android:layout_height="165dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/duaorg"
+            app:layout_constraintStart_toStartOf="@+id/kegiatan"
+            app:layout_constraintTop_toBottomOf="@+id/kegiatan" />
+
+        <ImageView
+            android:id="@+id/gam2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="27dp"
+            android:src="@drawable/tigaorg"
+            app:layout_constraintStart_toEndOf="@+id/gam1"
+            app:layout_constraintTop_toTopOf="@+id/gam1" />
+
+        <ImageView
+            android:id="@+id/gam3"
+            android:layout_width="165dp"
+            android:layout_height="165dp"
+            android:layout_marginTop="27dp"
+            android:src="@drawable/duaorg"
+            app:layout_constraintStart_toStartOf="@+id/gam1"
+            app:layout_constraintTop_toBottomOf="@+id/gam1" />
+
+        <ImageView
+            android:id="@+id/gam4"
+            android:layout_width="165dp"
+            android:layout_height="165dp"
+            android:src="@drawable/tigaorg"
+            app:layout_constraintStart_toStartOf="@+id/gam2"
+            app:layout_constraintTop_toTopOf="@+id/gam3" />
+
+        <TextView
+            android:id="@+id/artikel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:fontFamily="@font/popin2"
+            android:text="Artikel"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="@+id/gam3"
+            app:layout_constraintTop_toBottomOf="@+id/gam3" />
+
+        <ImageView
+            android:id="@+id/gambar2"
+            android:layout_width="116dp"
+            android:layout_height="116dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/duaorg"
+            app:layout_constraintStart_toStartOf="@+id/artikel"
+            app:layout_constraintTop_toBottomOf="@+id/artikel" />
+
+        <TextView
+            android:id="@+id/top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="11dp"
+            android:fontFamily="@font/popin2"
+            android:text="Terlalu Jago, Trunojoyo Juara Lagi"
+            app:layout_constraintStart_toEndOf="@+id/gambar2"
+            app:layout_constraintTop_toTopOf="@+id/gambar2" />
+
+        <TextView
+            android:id="@+id/ket"
+            android:layout_width="228dp"
+            android:layout_height="51dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="15dp"
+            android:justificationMode="inter_word"
+            android:fontFamily="@font/popin3"
+            android:text="@string/ket1"
+            android:textSize="11dp"
+            app:layout_constraintStart_toEndOf="@+id/gambar2"
+            app:layout_constraintTop_toBottomOf="@+id/top" />
+
+        <ImageView
+            android:id="@+id/gambar3"
+            android:layout_width="116dp"
+            android:layout_height="116dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/duaorg"
+            app:layout_constraintStart_toStartOf="@+id/gambar2"
+            app:layout_constraintTop_toBottomOf="@+id/gambar2" />
+
+        <TextView
+            android:id="@+id/top2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:fontFamily="@font/popin2"
+            android:text="Terlalu Jago, Trunojoyo Juara Lagi"
+            app:layout_constraintStart_toStartOf="@+id/top"
+            app:layout_constraintTop_toTopOf="@+id/gambar3" />
+
+        <TextView
+            android:id="@+id/ket2"
+            android:layout_width="228dp"
+            android:layout_height="51dp"
+            android:layout_marginTop="15dp"
+            android:justificationMode="inter_word"
+            android:fontFamily="@font/popin3"
+            android:text="@string/ket2"
+            android:textSize="11dp"
+            app:layout_constraintStart_toStartOf="@+id/top2"
+            app:layout_constraintTop_toBottomOf="@+id/top2" />
+
+        <ImageView
+            android:id="@+id/bc3"
+            android:layout_width="116dp"
+            android:layout_height="116dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="50dp"
+            android:src="@drawable/duaorg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/gambar3"
+            app:layout_constraintTop_toBottomOf="@+id/gambar3" />
+
+        <TextView
+            android:id="@+id/top1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:fontFamily="@font/popin2"
+            android:text="Terlalu Jago, Trunojoyo Juara Lagi"
+            app:layout_constraintStart_toStartOf="@+id/ket2"
+            app:layout_constraintTop_toTopOf="@+id/bc3" />
+
+        <TextView
+            android:id="@+id/keterangan"
+            android:layout_width="228dp"
+            android:layout_height="51dp"
+            android:justificationMode="inter_word"
+            android:fontFamily="@font/popin3"
+            android:layout_marginTop="15dp"
+            android:text="@string/ket3"
+            android:textSize="11dp"
+            app:layout_constraintStart_toStartOf="@+id/top1"
+            app:layout_constraintTop_toBottomOf="@+id/top1" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

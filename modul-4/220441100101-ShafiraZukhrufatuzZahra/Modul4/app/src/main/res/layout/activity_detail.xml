@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:background="@color/white"
+    tools:context=".DetailActivity">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/pp"
+        android:layout_width="65dp"
+        android:layout_height="70dp"
+        android:layout_margin="5dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pp"
+        app:shapeAppearanceOverlay="@style/circular"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/namapengguna"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jenny Wilson"
+        android:layout_marginTop="11dp"
+        android:layout_marginStart="5dp"
+        android:textStyle="bold"
+        android:textSize="17dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/pp"
+        app:layout_constraintTop_toTopOf="@+id/pp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/@jenny9"
+        android:textSize="14dp"
+        android:textColor="#806C6C"
+        app:layout_constraintStart_toStartOf="@+id/namapengguna"
+        app:layout_constraintTop_toBottomOf="@+id/namapengguna"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:justificationMode="inter_word"
+        android:layout_marginTop="9dp"
+        android:textSize="14dp"
+        android:text="@string/caption"
+        app:layout_constraintStart_toStartOf="@+id/pp"
+        app:layout_constraintTop_toBottomOf="@+id/pp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="10 minutes ago"
+        android:textColor="#706666"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="@+id/caption"
+        app:layout_constraintTop_toBottomOf="@+id/caption"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/gambarpostingan"
+        android:layout_width="344dp"
+        android:layout_height="235dp"
+        android:layout_marginTop="9dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/post"
+        app:layout_constraintStart_toStartOf="@+id/time"
+        app:layout_constraintTop_toBottomOf="@+id/time"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

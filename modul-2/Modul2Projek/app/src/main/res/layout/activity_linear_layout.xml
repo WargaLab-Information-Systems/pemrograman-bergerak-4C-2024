@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+  <TextView
+      android:id="@+id/trunojoyo_name"
+      android:layout_width="210dp"
+      android:layout_height="27dp"
+      android:textColor="@color/black"
+      android:layout_marginStart="18dp"
+      android:layout_marginTop="23dp"
+      android:fontFamily="@font/poppins_bold"
+      android:text="Universitas Trunojoyo"
+      android:textSize="18dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+      android:id="@+id/beranda"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5dp"
+      android:fontFamily="@font/poppins"
+      android:text="Beranda"
+      android:textColor="@color/black"
+      android:textSize="15dp"
+      app:layout_constraintStart_toStartOf="@id/trunojoyo_name"
+      app:layout_constraintTop_toBottomOf="@id/trunojoyo_name"/>
+
+  <ImageView
+      android:id="@+id/logoutm"
+      android:layout_width="36dp"
+      android:layout_height="36dp"
+      android:layout_marginTop="27dp"
+      android:layout_marginEnd="23dp"
+      android:src="@drawable/logo_trunojoyoside"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent"/>
+
+  <TextView
+      android:id="@+id/aktivitas"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="@color/black"
+      android:fontFamily="@font/poppins_medium"
+      android:text="Aktivitas Kegiatan"
+      android:textSize="15dp"
+      app:layout_constraintStart_toStartOf="@+id/beranda"
+      app:layout_constraintTop_toBottomOf="@+id/beranda" />
+
+    <ImageView
+        android:id="@+id/gambar1"
+        android:layout_width="114dp"
+        android:layout_height="104dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/fotokonten1"
+        app:layout_constraintStart_toStartOf="@+id/aktivitas"
+        app:layout_constraintTop_toTopOf="@+id/aktivitas" />
+
+    <ImageView
+        android:id="@+id/gambar2"
+        android:layout_width="110dp"
+        android:layout_height="107dp"
+        android:layout_marginStart="248dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/fotokonten2"
+        app:layout_constraintStart_toStartOf="@+id/gambar1"
+        app:layout_constraintTop_toTopOf="@+id/gambar1" />
+
+    <ImageView
+        android:id="@+id/gambar3"
+        android:layout_width="117dp"
+        android:layout_height="121dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="156dp"
+        android:src="@drawable/fotokonten1"
+        app:layout_constraintStart_toStartOf="@+id/gambar1"
+        app:layout_constraintTop_toTopOf="@+id/gambar2" />
+
+    <ImageView
+        android:id="@+id/gambar4"
+        android:layout_width="115dp"
+        android:layout_height="111dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/fotokonten2"
+        app:layout_constraintStart_toStartOf="@+id/gambar1"
+        app:layout_constraintTop_toTopOf="@+id/gambar3" />
+
+    <TextView
+        android:id="@+id/artikel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Artikel"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="@+id/gambar3"
+        app:layout_constraintTop_toBottomOf="@+id/gambar3" />
+
+    <ImageView
+        android:id="@+id/gambar5"
+        android:layout_width="116dp"
+        android:layout_height="116dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/fotokonten1"
+        app:layout_constraintStart_toStartOf="@+id/artikel"
+        app:layout_constraintTop_toBottomOf="@+id/artikel" />
+
+    <TextView
+        android:id="@+id/terlalujago1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="76dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Terlalu Jago, Trunojoyo Juara Lagi"
+        app:layout_constraintStart_toEndOf="@+id/gambar5"
+        app:layout_constraintTop_toBottomOf="@+id/gambar4" />
+
+  <TextView
+      android:id="@+id/ket1"
+      android:layout_width="245dp"
+      android:layout_height="61dp"
+      android:layout_marginStart="20dp"
+      android:layout_marginTop="12dp"
+      android:fontFamily="@font/poppins_light"
+      android:justificationMode="inter_word"
+      android:text="Universitas Trunojoyo berhasil meraih juara1
+        dalam ajang perlombaan debat nasional yang diselenggarakan oleh..."
+      android:textColor="@color/black"
+      android:textSize="11dp"
+      app:layout_constraintStart_toEndOf="@+id/gambar5"
+      app:layout_constraintTop_toBottomOf="@id/terlalujago1" />
+
+  <ImageView
+        android:id="@+id/gambar6"
+        android:layout_width="116dp"
+        android:layout_height="116dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/fotokonten1"
+        app:layout_constraintStart_toStartOf="@+id/gambar5"
+        app:layout_constraintTop_toBottomOf="@+id/gambar5" />
+
+    <TextView
+        android:id="@+id/terlalujago2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Terlalu Jago, Trunojoyo Juara Lagi"
+        app:layout_constraintStart_toStartOf="@id/terlalujago1"
+        app:layout_constraintTop_toTopOf="@+id/gambar6" />
+
+  <TextView
+      android:id="@+id/ket2"
+      android:layout_width="232dp"
+      android:layout_height="63dp"
+      android:layout_marginTop="15dp"
+      android:fontFamily="@font/poppins_light"
+      android:justificationMode="inter_word"
+      android:text="Universitas Trunojoyo berhasil meraih juara 1 dalam ajang perlombaan debat nasional yang diselenggarakan oleh..."
+      android:textColor="@color/black"
+      android:textSize="11dp"
+      app:layout_constraintStart_toStartOf="@+id/terlalujago2"
+      app:layout_constraintTop_toBottomOf="@+id/terlalujago2" />
+
+    <ImageView
+        android:id="@+id/gambar7"
+        android:layout_width="116dp"
+        android:layout_height="116dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginBottom="50dp"
+        android:src="@drawable/fotokonten1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/gambar6"
+        app:layout_constraintTop_toBottomOf="@+id/gambar6"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/terlalujago3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Terlalu Jago, Trunojoyo Juara Lagi"
+        app:layout_constraintStart_toStartOf="@+id/ket2"
+        app:layout_constraintTop_toTopOf="@+id/gambar7" />
+
+    <TextView
+        android:id="@+id/ket3"
+        android:layout_width="228dp"
+        android:layout_height="51dp"
+        android:fontFamily="@font/poppins_light"
+        android:textColor="@color/black"
+        android:layout_marginTop="15dp"
+        android:justificationMode="inter_word"
+        android:text="Universitas Trunojoyo berhasil meraih juara 1 dalam ajang perlombaan debat nasional yang diselenggarakan oleh..."
+        android:textSize="11dp"
+        app:layout_constraintStart_toStartOf="@+id/terlalujago3"
+        app:layout_constraintTop_toBottomOf="@+id/terlalujago3" />
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

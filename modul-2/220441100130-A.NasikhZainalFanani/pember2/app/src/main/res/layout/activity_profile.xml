@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ProfileActivity">
+
+    <!-- Judul -->
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:text="A. Nasikh Zainal Fanani"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"/>
+
+    <!-- Konten Aktivitas Kegiatan -->
+    <TextView
+        android:id="@+id/text_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:text="Profile"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        android:layout_below="@id/text_title"
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="20dp"/>
+
+    <ImageButton
+        android:id="@+id/btn_profile"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="340dp"
+        android:layout_marginTop="20dp"
+        android:background="@null"
+        android:src="@drawable/profile_btn" />
+
+    <!-- Logo Universitas -->
+    <ImageView
+        android:id="@+id/image_university_logo_profile"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/author_pic"
+        android:layout_below="@id/text_subtitle"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/text_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:text="A. Nasikh Zainal Fanani"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:layout_below="@+id/image_university_logo_profile"
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="100dp"/>
+
+    <!-- Informasi Profile -->
+    <TextView
+        android:id="@+id/text_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Profile Singkat"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:layout_below="@id/text_image"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"/>
+
+    <TextView
+        android:id="@+id/text_deskripsi_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:text="Saya adalah seorang individu yang penuh dedikasi dan komitmen terhadap pekerjaan saya. Dengan kepribadian yang tangguh dan kemauan untuk terus belajar, saya berhasil menghadapi tantangan dengan kepala tegak. Keahlian dan pengetahuan saya dalam bidang saya membuat saya menjadi sumber inspirasi bagi rekan-rekan saya."
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:layout_below="@id/text_profile"
+        android:layout_marginTop="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="start"/>
+
+</RelativeLayout>
