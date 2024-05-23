@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="16dp"
+    android:layout_marginBottom="14dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profile"
+                android:layout_width="130px"
+                android:layout_height="130px"
+                android:src="@drawable/gambar1"
+                android:layout_marginRight="8dp"
+                app:shapeAppearanceOverlay="@style/circular"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/at"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="Jenny Wilson"
+                    android:fontFamily="@font/popinbold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/at2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:text="\@jenny9"/>
+
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/btn_more"
+                android:layout_width="80px"
+                android:layout_height="80px"
+                android:src="@drawable/titik3" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="14dp">
+
+            <TextView
+                android:id="@+id/post_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Community Events!"
+                android:fontFamily="@font/popinsemibold"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/post_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/deskripsi"
+                android:fontFamily="@font/popinreg"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:id="@+id/post_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="10 minutes ago"
+                android:fontFamily="@font/popinreg"
+                android:textColor="@color/ef_grey"
+                android:textSize="14dp"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/post_img"
+                android:layout_width="match_parent"
+                android:layout_height="630px"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/gambar2"
+                app:shapeAppearanceOverlay="@style/circular10p"/>
+
+        </LinearLayout>
+
+        <!--like,commnt,share-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="6dp"
+            android:gravity="">
+
+            <!--wrapper-->
+            <LinearLayout
+                android:id="@+id/btn_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginRight="16dp">
+
+                <ImageView
+                    android:layout_width="80px"
+                    android:layout_height="80px"
+                    android:src="@drawable/hati" />
+
+                <TextView
+                    android:id="@+id/post_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/popinme"
+                    android:text="20"
+                    android:textSize="16dp"/>
+
+            </LinearLayout>
+            <!--wrapper-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="80px"
+                    android:layout_height="80px"
+                    android:src="@drawable/komentar" />
+
+                <TextView
+                    android:id="@+id/post_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="4dp"
+                    android:text="20"
+                    android:fontFamily="@font/popinme"
+                    android:textSize="16dp"/>
+
+            </LinearLayout>
+            <!--wrapper-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="80px"
+                    android:layout_height="80px"
+                    android:src="@drawable/share"/>
+
+                <ImageView
+                    android:layout_width="80px"
+                    android:layout_height="80px"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/sematkan" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
