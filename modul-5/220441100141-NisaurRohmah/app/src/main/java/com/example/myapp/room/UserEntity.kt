@@ -1,4 +1,4 @@
-package com.example.roomdatabase1.room
+package com.example.myapp.room
 
 import android.os.Parcel
 import android.os.Parcelable
@@ -8,37 +8,30 @@ import androidx.room.PrimaryKey
 import java.io.File
 
 @Entity
-data class PostDatabase(
+data class UserEntity(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
     val id: Int = 0,
 
-    @ColumnInfo(name = "post_title")
-    val name: String,
+    @ColumnInfo(name = "caption")
+    val caption: String,
 
-    @ColumnInfo(name = "post_desc")
-    val description: String,
-
-    @ColumnInfo(name = "post_image")
+    @ColumnInfo(name = "image")
     val image: File,
 
-    @ColumnInfo(name = "post_like")
-    var like: Int = 0,
-
+    @ColumnInfo(name = "like")
+    var like: Int
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
         parcel.readString()!!,
-        parcel.readString()!!,
         File(parcel.readString()!!),
         parcel.readInt()
-
     )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeInt(id)
-        parcel.writeString(name)
-        parcel.writeString(description)
+        parcel.writeString(caption)
         parcel.writeString(image.path)
         parcel.writeInt(like)
     }
@@ -47,12 +40,12 @@ data class PostDatabase(
         return 0
     }
 
-    companion object CREATOR : Parcelable.Creator<PostDatabase> {
-        override fun createFromParcel(parcel: Parcel): PostDatabase {
-            return PostDatabase(parcel)
+    companion object CREATOR : Parcelable.Creator<UserEntity> {
+        override fun createFromParcel(parcel: Parcel): UserEntity {
+            return UserEntity(parcel)
         }
 
-        override fun newArray(size: Int): Array<PostDatabase?> {
+        override fun newArray(size: Int): Array<UserEntity?> {
             return arrayOfNulls(size)
         }
     }

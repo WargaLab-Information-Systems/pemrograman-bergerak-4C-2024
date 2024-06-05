@@ -1,15 +1,15 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("kotlin-kapt") // Tambahkan ini jika menggunakan kapt
+    id("org.jetbrains.kotlin.kapt")
 }
 
 android {
-    namespace = "com.example.roomdatabase1"
+    namespace = "com.example.myapp"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.roomdatabase1"
+        applicationId = "com.example.myapp"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
@@ -37,27 +37,26 @@ android {
 }
 
 dependencies {
+
     implementation("androidx.core:core-ktx:1.13.1")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.12.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    implementation("androidx.core:core-animation:1.0.0")
-    implementation("com.android.tools.compose:compose-preview-renderer:0.0.1-alpha01")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
-    // room database
+    // room database untuk mengelola database
     implementation("androidx.room:room-runtime:2.5.2")
     kapt("androidx.room:room-compiler:2.5.2")
 
-    // image picker
+    // image picker untuk memilih gambar dari galeri
     implementation("com.github.esafirm:android-image-picker:3.1.0")
 
-    // Glide
+    // Glide untuk menampilkan gambar
     implementation("com.github.bumptech.glide:glide:4.16.0")
 
-    // viewmodel
+    // viewmodel pemisahan antara data dan UI
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
 }

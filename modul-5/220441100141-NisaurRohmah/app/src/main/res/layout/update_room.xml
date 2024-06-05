@@ -11,17 +11,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/back"
+        android:onClick="toMain"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_bold"
-        android:text="New Post"
+        android:text="Change Post"
         android:textAlignment="center"
         android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/kembali"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
@@ -38,16 +41,16 @@
         <ImageView
             android:id="@+id/imagepost"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:adjustViewBounds="true"
             android:src="@drawable/pict2" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/btnChange"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:background="#2A2929A3"
+            android:background="#8026262E"
             android:fontFamily="@font/poppins"
             android:paddingHorizontal="40dp"
             android:paddingVertical="10dp"
@@ -63,7 +66,7 @@
         android:layout_marginTop="38dp"
         android:fontFamily="@font/poppins_bold"
         android:text="Description"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
     <com.google.android.material.textfield.TextInputEditText
@@ -72,11 +75,11 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins"
         android:hint="Write a description of your item (maximum 5000 characters)"
-        android:textSize="10sp"
+        android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnposting"
+        android:id="@+id/btn_update_posting"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="#27B404"

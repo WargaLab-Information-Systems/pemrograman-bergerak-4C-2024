@@ -1,4 +1,4 @@
-package com.example.roomdatabase1.utils
+package com.example.myapp.utils
 
 import android.content.ContentValues
 import android.content.Context
@@ -10,6 +10,7 @@ import android.os.Build
 import android.os.Environment
 import android.provider.MediaStore
 import androidx.core.content.FileProvider
+import androidx.exifinterface.media.ExifInterface
 import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.FileOutputStream
@@ -18,10 +19,13 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
+// Ukuran maksimal file gambar yang diizinkan adalah 1 MB
 private const val MAXIMAL_SIZE = 1000000 //1 MB
 
+// Format nama file gambar yang akan dibuat
 private const val FILENAME_FORMAT = "yyyyMMdd_HHmmss"
 
+// Membuat timestamp dengan format yang telah ditentukan
 private val timeStamp: String = SimpleDateFormat(FILENAME_FORMAT, Locale.US).format(Date())
 
 fun getImageUri(context: Context): Uri {
@@ -40,6 +44,10 @@ fun getImageUri(context: Context): Uri {
     return uri ?: getImageUriForPreQ(context)
 }
 
+/**
+ * Fungsi ini digunakan untuk mendapatkan Uri gambar untuk versi Android sebelum Q.
+ * Fungsi ini akan membuat file gambar baru dan mengembalikan Uri dari file tersebut.
+ */
 private fun getImageUriForPreQ(context: Context): Uri {
     val filesDir = context.getExternalFilesDir(Environment.DIRECTORY_PICTURES)
     val imageFile = File(filesDir, "/MyCamera/$timeStamp.jpg")
@@ -51,11 +59,19 @@ private fun getImageUriForPreQ(context: Context): Uri {
     )
 }
 
+/**
+ * Fungsi ini digunakan untuk membuat file sementara.
+ * Fungsi ini akan membuat file baru di direktori cache dengan nama file berdasarkan timestamp.
+ */
 fun createCustomTempFile(context: Context): File {
     val filesDir = context.externalCacheDir
     return File.createTempFile(timeStamp, ".jpg", filesDir)
 }
 
+/**
+ * Fungsi ini digunakan untuk mengubah Uri gambar menjadi File.
+ * Fungsi ini akan membaca data dari Uri dan menulisnya ke file sementara.
+ */
 fun uriToFile(imageUri: Uri, context: Context): File {
     val myFile = createCustomTempFile(context)
     val inputStream = context.contentResolver.openInputStream(imageUri) as InputStream
@@ -68,10 +84,18 @@ fun uriToFile(imageUri: Uri, context: Context): File {
     return myFile
 }
 
+/**
+ * Fungsi ini digunakan untuk mengubah File menjadi Uri.
+ * Fungsi ini akan mengembalikan Uri dari file yang diberikan.
+ */
 fun fileToUri(context: Context, file: File): Uri {
     return FileProvider.getUriForFile(context, context.applicationContext.packageName + ".provider", file)
 }
 
+/**
+ * Fungsi ini digunakan untuk mengurangi ukuran file gambar.
+ * Fungsi ini akan mengurangi kualitas gambar hingga ukuran file kurang dari 1 MB.
+ */
 fun File.reduceFileImage(): File {
     val file = this
     val bitmap = BitmapFactory.decodeFile(file.path).getRotatedBitmap(file)
@@ -88,21 +112,27 @@ fun File.reduceFileImage(): File {
     return file
 }
 
-
+/**
+ * Fungsi ini digunakan untuk mendapatkan Bitmap yang telah diputar berdasarkan orientasi gambar.
+ * Fungsi ini akan membaca orientasi gambar dari Exif data dan memutar Bitmap sesuai dengan orientasi tersebut.
+ */
 fun Bitmap.getRotatedBitmap(file: File): Bitmap? {
-    val orientation = androidx.exifinterface.media.ExifInterface(file).getAttributeInt(
-        androidx.exifinterface.media.ExifInterface.TAG_ORIENTATION, androidx.exifinterface.media.ExifInterface.ORIENTATION_UNDEFINED
+    val orientation = ExifInterface(file).getAttributeInt(
+        ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_UNDEFINED
     )
     return when (orientation) {
-        androidx.exifinterface.media.ExifInterface.ORIENTATION_ROTATE_90 -> rotateImage(this, 90F)
-        androidx.exifinterface.media.ExifInterface.ORIENTATION_ROTATE_180 -> rotateImage(this, 180F)
-        androidx.exifinterface.media.ExifInterface.ORIENTATION_ROTATE_270 -> rotateImage(this, 270F)
-        androidx.exifinterface.media.ExifInterface.ORIENTATION_NORMAL -> this
+        ExifInterface.ORIENTATION_ROTATE_90 -> rotateImage(this, 90F)
+        ExifInterface.ORIENTATION_ROTATE_180 -> rotateImage(this, 180F)
+        ExifInterface.ORIENTATION_ROTATE_270 -> rotateImage(this, 270F)
+        ExifInterface.ORIENTATION_NORMAL -> this
         else -> this
     }
 }
 
-
+/**
+ * Fungsi ini digunakan untuk memutar Bitmap.
+ * Fungsi ini akan membuat Bitmap baru yang telah diputar berdasarkan sudut yang diberikan.
+ */
 fun rotateImage(source: Bitmap, angle: Float): Bitmap? {
     val matrix = Matrix()
     matrix.postRotate(angle)

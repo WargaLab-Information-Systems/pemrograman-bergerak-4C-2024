@@ -1,4 +1,4 @@
-package com.example.roomdatabase1
+package com.example.myapp
 
 import android.content.Intent
 import android.net.Uri
@@ -15,30 +15,32 @@ import com.esafirm.imagepicker.features.ImagePickerConfig
 import com.esafirm.imagepicker.features.ImagePickerMode
 import com.esafirm.imagepicker.features.ReturnMode
 import com.esafirm.imagepicker.features.registerImagePicker
-import com.example.roomdatabase1.room.AppViewModel
-import com.example.roomdatabase1.room.PostDatabase
-import com.example.roomdatabase1.room.RoomViewModelFactory
-import com.example.roomdatabase1.utils.reduceFileImage
-import com.example.roomdatabase1.utils.uriToFile
+import com.example.myapp.room.UserEntity
+import com.example.myapp.room.UserViewModel
+import com.example.myapp.room.UserViewModelFactory
+import com.example.myapp.utils.reduceFileImage
+import com.example.myapp.utils.uriToFile
 import com.google.android.material.textfield.TextInputEditText
-import kotlin.random.Random
+import com.google.android.material.textview.MaterialTextView
 
-class AddPost : AppCompatActivity(){
+class NewPostActivity : AppCompatActivity() {
+
+
     private var currentImageUri: Uri? = null
-    private lateinit var postViewModel: AppViewModel
-    private lateinit var vPostDesc: TextInputEditText
-    private lateinit var vPostImage: ImageView
-    private lateinit var vText_img: TextView
+    private lateinit var userViewModel: UserViewModel
+    private lateinit var caption: TextInputEditText
+    private lateinit var imagepost: ImageView
+    private lateinit var change: MaterialTextView
 
     private val imagePickerLauncher = registerImagePicker {
         val firstImage = it.firstOrNull() ?: return@registerImagePicker
         if (firstImage.uri.toString().isNotEmpty()) {
-            vPostImage.visibility = View.VISIBLE
+            imagepost.visibility = View.VISIBLE
             currentImageUri = firstImage.uri
-            vText_img.setText("change")
-            Glide.with(vPostImage)
+            change.setText("change")
+            Glide.with(imagepost)
                 .load(firstImage.uri)
-                .into(vPostImage)
+                .into(imagepost)
         } else {
             View.GONE
         }
@@ -46,13 +48,13 @@ class AddPost : AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.add_post)
-        val factory = RoomViewModelFactory.getInstance(this) //ini
-        postViewModel = ViewModelProvider(this, factory)[AppViewModel::class.java] //ini
+        setContentView(R.layout.new_post)
+        val factory = UserViewModelFactory.getInstance(this) //ini
+        userViewModel = ViewModelProvider(this, factory)[UserViewModel::class.java] //ini
 
-        vPostImage = findViewById(R.id.imagepost)
-        vPostDesc = findViewById(R.id.caption)
-        vText_img = findViewById(R.id.btnChange)
+        imagepost = findViewById(R.id.imagepost)
+        caption = findViewById(R.id.caption)
+        change = findViewById(R.id.btnChange)
         onClick()
     }
 
@@ -66,7 +68,7 @@ class AddPost : AppCompatActivity(){
                     isFolderMode = true
                     folderTitle = "Galeri"
                     isShowCamera = false
-                    imageTitle = "Click to choice the image"
+                    imageTitle = "Klik untuk memilih gambar"
                     doneButtonText = "Done"
                 }
             )
@@ -83,13 +85,13 @@ class AddPost : AppCompatActivity(){
     private fun validateInput(): Boolean {
         var error = 0
 
-        if (vPostDesc.text.toString().isEmpty()) {
+        if (caption.text.toString().isEmpty()) {
             error++
-            vPostDesc.error = "Desc is not empty!"
+            caption.error = "Caption tidak boleh kosong!"
         }
-        if (vText_img.text.toString() == "add") {
+        if (change.text.toString() == "add") {
             error++
-            vText_img.error = "Image is not Empty!"
+            change.error = "Gambar tidak boleh kosong!"
         }
 
         return error == 0
@@ -99,23 +101,20 @@ class AddPost : AppCompatActivity(){
         val imageFile = currentImageUri?.let { uriToFile(it, this).reduceFileImage() }
 
         val post = imageFile?.let {
-            val descriptionText = vPostDesc.text.toString()
-            val words = descriptionText.split(" ")
-            val firstTwoWords = words.take(2).joinToString(" ")
-            PostDatabase(
+            val descriptionText = caption.text.toString()
+            UserEntity (
                 id = 0,
-                name = firstTwoWords,
-                description = descriptionText,
+                caption = descriptionText,
                 image = imageFile,
-                like = Random.nextInt(1, 51)
+                like = 0
             )
         }
 
-        if (post != null) postViewModel.insertPost(post)
+        if (post != null) userViewModel.insertPost(post)
 
         Toast.makeText(
-            this@AddPost,
-            "Data Success Added",
+            this@NewPostActivity,
+            "Berhasil upload",
             Toast.LENGTH_SHORT
         ).show()
 
@@ -126,5 +125,4 @@ class AddPost : AppCompatActivity(){
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
-
 }
