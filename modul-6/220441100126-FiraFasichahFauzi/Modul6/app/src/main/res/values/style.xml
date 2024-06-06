@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tambahkan style ini untuk sudut melengkung -->
+    <style name="RoundedCornersImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeBottomRight">25dp</item> <!-- Ukuran sudut kanan bawah -->
+        <item name="cornerSizeBottomLeft">25dp</item>  <!-- Ukuran sudut kiri bawah -->
+        <item name="cornerSizeTopRight">0dp</item>     <!-- Sudut kanan atas tidak melengkung -->
+        <item name="cornerSizeTopLeft">0dp</item>
+    </style>
+</resources>
