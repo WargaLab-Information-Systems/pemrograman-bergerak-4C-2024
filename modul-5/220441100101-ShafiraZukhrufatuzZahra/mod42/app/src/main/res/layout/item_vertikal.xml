@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:cardCornerRadius="10dp"
+    android:backgroundTint="@color/white"
+    app:cardElevation="0dp"
+    android:layout_margin="15dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/pp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/aku"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/circle" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignTop="@id/pp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="127dp"
+            android:layout_toEndOf="@+id/pp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/namauser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Ashaa"
+                android:textColor="#3C3C3C"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="\@shaa30"
+                android:textColor="#9D9C9C"
+                android:textSize="10dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/pp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="87dp"
+            android:src="@drawable/ic_menu" />
+
+        <TextView
+            android:id="@+id/judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Judul"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="14sp"
+            android:layout_alignStart="@id/pp"
+            android:layout_below="@id/pp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="12dp"
+            />
+
+        <TextView
+            android:id="@+id/descpost"
+            android:layout_width="286dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/judul"
+            android:layout_alignStart="@id/pp"
+            android:layout_marginStart="-1dp"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/poppins"
+            android:lineHeight="18sp"
+            android:text="Beach cleaning activities in the eastern harbor area in order to maintain natural stability. #recycle #ecofriendly #newnormal #2024gantisepatu"
+            android:textColor="#3C3C3C" />
+
+        <TextView
+            android:id="@+id/waktu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/descpost"
+            android:layout_alignStart="@id/descpost"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="10 menit yang lalu"
+            android:textColor="#9D9C9C"
+            android:textSize="10sp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgpost"
+            android:layout_width="282dp"
+            android:layout_height="175dp"
+            android:layout_below="@+id/waktu"
+            android:layout_alignStart="@id/waktu"
+            android:layout_alignEnd="@id/menu"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="-6dp"
+            android:layout_marginEnd="-18dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/post"
+            app:cardCornerRadius="10dp"
+            app:shapeAppearanceOverlay="@style/circular" />
+
+        <RelativeLayout
+            android:layout_width="307dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgpost"
+            android:layout_marginTop="15dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/love"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:src="@drawable/ic_love" />
+
+                <TextView
+                    android:id="@+id/like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="0"
+                    android:textColor="#434142"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toEndOf="@id/love" />
+
+
+                <TextView
+                    android:id="@+id/chat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:drawableStart="@drawable/ic_chat"
+                    android:drawablePadding="5dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:padding="2dp"
+                    android:text="0"
+                    android:textColor="#434142"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toEndOf="@id/like"
+                    app:layout_constraintTop_toTopOf="@id/like" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@+id/bookmark"
+                android:src="@drawable/ic_share" />
+
+            <ImageView
+                android:id="@+id/bookmark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="13dp"
+                android:src="@drawable/ic_bookmark" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

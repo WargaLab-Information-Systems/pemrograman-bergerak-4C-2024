@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#FBFBFB"
+    tools:context=".MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/morning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                app:layout_goneMarginStart="5dp"
+                android:fontFamily="@font/quicksandsemibold"
+                android:lineHeight="30sp"
+                android:text="Good\nMorning, Shafira"
+                android:textColor="#3C3C3C"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/morning"
+                app:layout_constraintTop_toTopOf="@id/morning"
+                android:src="@drawable/sun"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="41dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/itemlayout"
+                android:layout_width="361dp"
+                android:layout_height="823dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/morning"
+                app:layout_constraintVertical_bias="1.0"
+                tools:listitem="@layout/item_vertikal"
+                tools:orientation="vertical" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/bAddPost"
+        android:onClick="postfeed"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/ic_plus"
+        android:backgroundTint="#27B404"
+        app:tint="@android:color/white"
+        app:shapeAppearanceOverlay="@style/circle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
