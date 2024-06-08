@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".detail_place">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/place_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Ubud's Hotel"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:fontFamily="@font/quicksand_bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/bagikan_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:src="@drawable/share"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="50dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/place_name" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/place_image"
+            android:layout_width="314dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/gambardetailgambar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/place_name" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/place_description"
+            android:layout_width="314dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins"
+            android:justificationMode="inter_word"
+            android:text="Creating a sustainable lifestyle is a meaningful journey and requires the active involvement of every individual. One practical step that can be taken is to understand the impact of every daily action on the environment and look for ways to reduce our ecological footprint. This can start from small decisions such as reducing the use of single-use plastics, choosing eco-friendly products, or recycling waste. The second step that can be taken is to adopt a more thoughtful consumption pattern. This involves choosing products that are durable and recyclable, and avoiding waste. Understanding the life cycle of products, from production to disposal, helps us make more conscious and sustainable choices. In addition, supporting manufacturers and brands that are committed to environmentally friendly production and distribution practices can also have a big impact."
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/place_image"
+            app:layout_constraintTop_toBottomOf="@+id/place_image" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
