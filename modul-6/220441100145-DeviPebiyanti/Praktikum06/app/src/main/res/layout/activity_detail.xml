@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:background="@drawable/bottomrounded">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/img_bg_dtl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/imgbg"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/back24"
+            android:onClick="backToMain"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="40dp"
+            android:paddingLeft="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txt_nama_dtl"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Kevin De Bruyne"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_number_dtl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="#8"
+                android:textColor="@color/yellow"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_club_dtl"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/logocity"
+                app:shapeAppearanceOverlay="@style/circular" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_player_dtl"
+            android:layout_width="250dp"
+            android:layout_height="260dp"
+            android:src="@drawable/img_player"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--Player Details-->
+    <LinearLayout
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Player Details"
+            android:textStyle="bold"
+            android:textSize="24sp"/>
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:columnCount="4"
+            android:orientation="horizontal">
+
+            <!-- Item 1 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundedall"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/txt_goals_dtl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="99"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:layout_marginBottom="5dp"/>
+                <RelativeLayout
+                    android:layout_width="50dp"
+                    android:layout_height="1dp"
+                    android:background="@color/black"
+                    android:layout_marginBottom="5dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Goals"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+            <!-- Item 2 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundedall"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/txt_asists_dtl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="400"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:layout_marginBottom="5dp"/>
+                <RelativeLayout
+                    android:layout_width="50dp"
+                    android:layout_height="1dp"
+                    android:background="@color/black"
+                    android:layout_marginBottom="5dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Assists"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+            <!-- Item 3 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundedall"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="5dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/txt_ratings_dtl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="50"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:layout_marginBottom="5dp"/>
+                <RelativeLayout
+                    android:layout_width="50dp"
+                    android:layout_height="1dp"
+                    android:background="@color/black"
+                    android:layout_marginBottom="5dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ratings"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+            <!-- Item 4 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundedall"
+                android:layout_columnWeight="1"
+                android:orientation="vertical"
+                android:layout_marginLeft="5dp"
+                android:padding="8dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/txt_position_dtl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="30"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:layout_marginBottom="5dp"/>
+                <RelativeLayout
+                    android:layout_width="50dp"
+                    android:layout_height="1dp"
+                    android:background="@color/black"
+                    android:layout_marginBottom="5dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Position"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+        </GridLayout>
+
+    </LinearLayout>
+
+    <!--Player Description-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="20dp">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Player Description"
+               android:textStyle="bold"
+               android:textSize="24sp"/>
+
+           <TextView
+               android:id="@+id/txt_detail_dtl"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="@string/lorem"
+               android:textSize="18sp" />
+       </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
