@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailRetrofitActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/background_image"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:alpha="0.5"
+            app:layout_constraintBottom_toBottomOf="@+id/player_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/RoundedCornersImageView" />
+
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Bruno Fernandes"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/player_image" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="#"
+            android:textColor="#FFC107"
+            android:textSize="23sp"
+            app:layout_constraintStart_toStartOf="@+id/name"
+            app:layout_constraintTop_toBottomOf="@+id/name" />
+
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="8"
+            android:textColor="#FFC107"
+            android:textSize="23sp"
+            app:layout_constraintStart_toEndOf="@+id/text"
+            app:layout_constraintTop_toTopOf="@+id/text" />
+
+        <ImageView
+            android:id="@+id/club_logo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintStart_toStartOf="@+id/text"
+            app:layout_constraintTop_toBottomOf="@+id/text" />
+
+
+            <ImageView
+                android:id="@+id/player_image"
+                android:layout_width="150dp"
+                android:layout_height="220dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_launcher_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Player Detail"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/player_image" />
+
+        <TextView
+            android:id="@+id/goals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="900"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/judul" />
+
+        <TextView
+            android:id="@+id/asissts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="400"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/goals"
+            app:layout_constraintTop_toTopOf="@+id/goals" />
+
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="5.0"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/asissts"
+            app:layout_constraintTop_toTopOf="@+id/asissts" />
+
+        <TextView
+            android:id="@+id/position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="AMF"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/rating"
+            app:layout_constraintTop_toTopOf="@+id/rating" />
+
+        <ImageView
+            android:id="@+id/gambar1"
+            android:layout_width="45dp"
+            android:layout_height="29dp"
+            android:src="@drawable/garis"
+            app:layout_constraintEnd_toEndOf="@+id/goals"
+            app:layout_constraintStart_toStartOf="@+id/goals"
+            app:layout_constraintTop_toBottomOf="@+id/goals" />
+
+        <ImageView
+            android:id="@+id/gambar2"
+            android:layout_width="45dp"
+            android:layout_height="29dp"
+            android:src="@drawable/garis"
+            app:layout_constraintEnd_toEndOf="@+id/asissts"
+            app:layout_constraintStart_toStartOf="@+id/asissts"
+            app:layout_constraintTop_toBottomOf="@+id/asissts" />
+
+        <ImageView
+            android:id="@+id/gambar3"
+            android:layout_width="45dp"
+            android:layout_height="29dp"
+            android:src="@drawable/garis"
+            app:layout_constraintEnd_toEndOf="@+id/rating"
+            app:layout_constraintStart_toStartOf="@+id/rating"
+            app:layout_constraintTop_toBottomOf="@+id/rating" />
+
+        <ImageView
+            android:id="@+id/gambar4"
+            android:layout_width="45dp"
+            android:layout_height="29dp"
+            android:src="@drawable/garis"
+            app:layout_constraintEnd_toEndOf="@+id/position"
+            app:layout_constraintStart_toStartOf="@+id/position"
+            app:layout_constraintTop_toBottomOf="@+id/position" />
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Goals"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/gambar1"
+            app:layout_constraintStart_toStartOf="@+id/gambar1"
+            app:layout_constraintTop_toBottomOf="@+id/gambar1" />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Assists"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/gambar2"
+            app:layout_constraintStart_toStartOf="@+id/gambar2"
+            app:layout_constraintTop_toBottomOf="@+id/gambar2" />
+
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Ratings"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/gambar3"
+            app:layout_constraintStart_toStartOf="@+id/gambar3"
+            app:layout_constraintTop_toBottomOf="@+id/gambar3" />
+
+        <TextView
+            android:id="@+id/text4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Position"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/gambar4"
+            app:layout_constraintStart_toStartOf="@+id/gambar4"
+            app:layout_constraintTop_toBottomOf="@+id/gambar4" />
+
+        <TextView
+            android:id="@+id/text5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Player Description"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/judul"
+            app:layout_constraintTop_toBottomOf="@+id/text1" />
+
+        <TextView
+            android:id="@+id/player_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginHorizontal="20dp"
+            android:justificationMode="inter_word"
+            android:fontFamily="@font/quicksand"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text5"
+            tools:text="deskripsi" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
