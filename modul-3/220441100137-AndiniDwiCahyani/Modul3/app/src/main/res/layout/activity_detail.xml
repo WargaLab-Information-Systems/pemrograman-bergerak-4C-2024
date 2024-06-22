@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".ActivityDetail">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/kembali_btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/chevron"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/hotel_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="Ubud's Hotel"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/bagikan_btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/hotel_image"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@drawable/hotel1"
+                app:shapeAppearanceOverlay="@style/Rounded" />
+
+            <TextView
+                android:id="@+id/hotel_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="Fave Hotel is a chain of hotels known for its modern, minimalist style and affordable prices. They offer simple yet comfortable accommodations with all the basic amenities needed for a pleasant stay. With bright and trendy designs, as well as strategic locations, fave Hotel is a popular choice for travelers and tourists looking for budget-friendly accommodation without compromising on quality."
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>
