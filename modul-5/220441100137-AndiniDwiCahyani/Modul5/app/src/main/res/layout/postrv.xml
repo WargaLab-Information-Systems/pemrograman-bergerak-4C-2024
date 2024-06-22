@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="5dp"
+    app:cardUseCompatPadding="true"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                app:cardCornerRadius="100dp">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/profilenew">
+                </ImageView>
+            </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="username"
+                    android:textSize="12sp">
+
+                </TextView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/etUsername"
+                        android:textSize="8sp"
+                        android:layout_marginStart="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/grey"
+                        android:text=" @username"
+                        android:fontFamily="@font/poppins">
+                    </TextView>
+                    <ImageButton
+                        android:id="@+id/btnMore"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/baseline_menu_24"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins"
+            android:justificationMode="inter_word"
+            android:text="@string/descpict"
+            android:textSize="12sp">
+
+        </TextView>
+        <TextView
+            android:id="@+id/tagar"
+            android:justificationMode="inter_word"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="#Tagar"
+            android:textSize="12sp"
+            android:textColor="@color/blue"
+            android:fontFamily="@font/poppins">
+        </TextView>
+        <TextView
+            android:id="@+id/waktupost"
+            android:justificationMode="inter_word"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1 hour ago"
+            android:textSize="12sp"
+            android:textColor="@color/grey"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/poppins">
+        </TextView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:cardCornerRadius="8dp">
+            <ImageView
+               android:id="@+id/postimage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_launcher_background"
+                android:adjustViewBounds="true"/>
+        </androidx.cardview.widget.CardView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+            <ImageView
+                android:id="@+id/suka"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/outline_favorite_border_24">
+
+            </ImageView>
+            <TextView
+                android:id="@+id/totalsuka"
+                android:layout_marginStart="5dp"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"/>
+            <ImageView
+                android:layout_marginStart="5dp"
+
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/baseline_comment_24">
+
+            </ImageView>
+            <TextView
+                android:layout_marginStart="5dp"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0"/>
+            <ImageView
+                android:id="@+id/sharebtn"
+                android:layout_marginStart="5dp"
+
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/baseline_share_24">
+
+            </ImageView>
+            <ImageView
+                android:id="@+id/savedbtn"
+                android:layout_marginStart="5dp"
+
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/baseline_bookmark_border_24">
+
+            </ImageView>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
