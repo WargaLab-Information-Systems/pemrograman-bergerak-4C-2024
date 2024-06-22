@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FCFCFC"
+    tools:context=".DetailPlayerActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="312dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/playerDetailBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/background_card"
+            app:shapeAppearance="@style/RoundedBottomLRCardViewShape" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/playerDetailImage"
+                android:layout_width="wrap_content"
+                android:layout_height="230dp"
+                android:layout_marginEnd="20dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/player_image"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <ImageView
+                android:id="@+id/backIconDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="60dp"
+                android:src="@drawable/icon_back_white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/playerDetailName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/play_bold"
+                android:text="Bruno\nFernandes"
+                android:textColor="#F8F8F8"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="@+id/backIconDetail"
+                app:layout_constraintTop_toBottomOf="@+id/backIconDetail" />
+
+            <TextView
+                android:id="@+id/playerDetailNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/play_bold"
+                android:text="#8"
+                android:textColor="#FFD33C"
+                android:textSize="28sp"
+                app:layout_constraintStart_toStartOf="@+id/playerDetailName"
+                app:layout_constraintTop_toBottomOf="@+id/playerDetailName" />
+
+            <ImageView
+                android:id="@+id/clubDetailLogo"
+                android:layout_width="40dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="12dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/club_logo"
+                app:layout_constraintStart_toStartOf="@+id/playerDetailNumber"
+                app:layout_constraintTop_toBottomOf="@+id/playerDetailNumber" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/plus_jakarta_sans_bold"
+        android:text="Player Details"
+        android:textColor="#434343"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="18dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        tools:layout_editor_absoluteX="20dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/roundedcardplayerdetail"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/playerGoals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:fontFamily="@font/play_bold"
+                android:text="900"
+                android:textColor="#434343"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:fontFamily="@font/plus_jakarta_sans_bold"
+                android:text="Goals"
+                android:textColor="#434343"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/roundedcardplayerdetail"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/playerAssists"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:fontFamily="@font/play_bold"
+                android:text="400"
+                android:textColor="#434343"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:fontFamily="@font/plus_jakarta_sans_bold"
+                android:text="Assists"
+                android:textColor="#434343"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/roundedcardplayerdetail"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/playerRatings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:fontFamily="@font/play_bold"
+                android:text="5.0"
+                android:textColor="#434343"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:fontFamily="@font/plus_jakarta_sans_bold"
+                android:text="Ratings"
+                android:textColor="#434343"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/roundedcardplayerdetail"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/playerPositions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:fontFamily="@font/play_bold"
+                android:text="AMF"
+                android:textColor="#434343"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:fontFamily="@font/plus_jakarta_sans_bold"
+                android:text="Position"
+                android:textColor="#434343"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/plus_jakarta_sans_bold"
+        android:text="Player Description"
+        android:textColor="#434343"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout5"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
+
+    <TextView
+        android:id="@+id/playerDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/plus_jakarta_sans"
+        android:text="Bruno Fernandes is a professional footballer from Portugal, renowned for his abilities as an attacking midfielder. Born on September 8, 1994, in Maia, Portugal, Fernandes displayed exceptional talent in football from a young age. His professional career began in Italy with Novara, before moving to Udinese and Sampdoria, and then returning to Portugal to play for Sporting CP. At Sporting CP, Fernandes truly shone. He became the team captain and helped the club secure various domestic titles, including the Taça de Portugal and Taça da Liga. His consistent performances, goal-scoring ability, and knack for providing assists made him one of the standout players in the Portuguese league. In January 2020, Fernandes transferred to Manchester United, one of the biggest clubs in England, for a significant fee. Since joining Manchester United, he has become a key player and has received widespread acclaim for his contributions on the field."
+        android:textColor="#434343"
+        android:textSize="10sp"
+        android:lineSpacingMultiplier="1.3"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
