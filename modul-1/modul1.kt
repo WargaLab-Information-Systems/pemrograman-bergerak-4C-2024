@@ -67,4 +67,3 @@ fun main() {
     println("Terima kasih telah melakukan pembayaran.")
     println("Kembalian Anda: Rp$kembalian")
 }
-w
